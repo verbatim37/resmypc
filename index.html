@@ -17,7 +17,7 @@
             --success-color: #28a745;
             --dark-color: #343a40;
             --light-color: #f8f9fa;
-            --accent-color: #28a745;
+            --accent-color: #3892C7; /* Updated to blue */
         }
 
         body {
@@ -111,6 +111,10 @@
             background-color: #218838;
             border-color: #1e7e34;
         }
+
+        .accent-bg {
+            background-color: var(--accent-color) !important;
+        }
     </style>
 </head>
 <body>
@@ -151,8 +155,8 @@
                 Serving East Texas and the surrounding areas, as well as remote.
             </p>
             <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
-                <a href="tel:903-231-3493" class="btn btn-success btn-lg px-4 gap-3">Call: 903-231-3493</a>
-                <a href="mailto:info@resmypc.com" class="btn btn-outline-light btn-lg px-4">Email Us!</a>
+                <a href="tel:903-231-3493" class="btn accent-bg btn-lg px-4 gap-3">Call: 903-231-3493</a>
+                <a href="#contact" class="btn btn-outline-light btn-lg px-4">Email Us!</a>
             </div>
         </div>
     </header>
@@ -171,11 +175,11 @@
                             <i class="bi bi-tools service-card-icon"></i>
                             <h5 class="card-title fw-bold">Computer Repair & Maintenance</h5>
                             <ul class="list-unstyled text-start mt-3">
-                                <li><i class="bi bi-caret-right-fill text-success me-2"></i>Diagnostic Services</li>
-                                <li><i class="bi bi-caret-right-fill text-success me-2"></i>Virus, Malware, and RootKit Removal</li>
-                                <li><i class="bi bi-caret-right-fill text-success me-2"></i>Boot Issues & Blue Screen Errors</li>
-                                <li><i class="bi bi-caret-right-fill text-success me-2"></i>Hardware Failures & Upgrades</li>
-                                <li><i class="bi bi-caret-right-fill text-success me-2"></i>Forgotten Password Removal</li>
+                                <li><i class="bi bi-caret-right-fill text-muted me-2"></i>Diagnostic Services</li>
+                                <li><i class="bi bi-caret-right-fill text-muted me-2"></i>Virus, Malware, and RootKit Removal</li>
+                                <li><i class="bi bi-caret-right-fill text-muted me-2"></i>Boot Issues & Blue Screen Errors</li>
+                                <li><i class="bi bi-caret-right-fill text-muted me-2"></i>Hardware Failures & Upgrades</li>
+                                <li><i class="bi bi-caret-right-fill text-muted me-2"></i>Forgotten Password Removal</li>
                             </ul>
                         </div>
                     </div>
@@ -186,11 +190,11 @@
                             <i class="bi bi-router-fill service-card-icon"></i>
                             <h5 class="card-title fw-bold">Network & IT Services</h5>
                             <ul class="list-unstyled text-start mt-3">
-                                <li><i class="bi bi-caret-right-fill text-success me-2"></i>Home & Business Network Setup</li>
-                                <li><i class="bi bi-caret-right-fill text-success me-2"></i>Network Optimization & Security</li>
-                                <li><i class="bi bi-caret-right-fill text-success me-2"></i>Managed IT Services for Small Businesses</li>
-                                <li><i class="bi bi-caret-right-fill text-success me-2"></i>Remote Support Services</li>
-                                <li><i class="bi bi-caret-right-fill text-success me-2"></i>In-House and In-Office Calls</li>
+                                <li><i class="bi bi-caret-right-fill text-muted me-2"></i>Home & Business Network Setup</li>
+                                <li><i class="bi bi-caret-right-fill text-muted me-2"></i>Network Optimization & Security</li>
+                                <li><i class="bi bi-caret-right-fill text-muted me-2"></i>Managed IT Services for Small Businesses</li>
+                                <li><i class="bi bi-caret-right-fill text-muted me-2"></i>Remote Support Services</li>
+                                <li><i class="bi bi-caret-right-fill text-muted me-2"></i>In-House and In-Office Calls</li>
                             </ul>
                         </div>
                     </div>
@@ -201,11 +205,11 @@
                             <i class="bi bi-database-fill-check service-card-icon"></i>
                             <h5 class="card-title fw-bold">Data & Cloud Solutions</h5>
                             <ul class="list-unstyled text-start mt-3">
-                                <li><i class="bi bi-caret-right-fill text-success me-2"></i>Data Recovery Services</li>
-                                <li><i class="bi bi-caret-right-fill text-success me-2"></i>Secure Data Disposal</li>
-                                <li><i class="bi bi-caret-right-fill text-success me-2"></i>Online Backup Services & Cloud Hosting</li>
-                                <li><i class="bi bi-caret-right-fill text-success me-2"></i>Website Hosting and Development</li>
-                                <li><i class="bi bi-caret-right-fill text-success me-2"></i>Software Installation & Data Transfer</li>
+                                <li><i class="bi bi-caret-right-fill text-muted me-2"></i>Data Recovery Services</li>
+                                <li><i class="bi bi-caret-right-fill text-muted me-2"></i>Secure Data Disposal</li>
+                                <li><i class="bi bi-caret-right-fill text-muted me-2"></i>Online Backup Services & Cloud Hosting</li>
+                                <li><i class="bi bi-caret-right-fill text-muted me-2"></i>Website Hosting and Development</li>
+                                <li><i class="bi bi-caret-right-fill text-muted me-2"></i>Software Installation & Data Transfer</li>
                             </ul>
                         </div>
                     </div>
@@ -219,7 +223,7 @@
                         For a detailed quote tailored to your specific issue, please contact us.
                         Prices are subject to change.
                     </p>
-                    <a href="mailto:info@resmypc.com" class="btn btn-outline-dark btn-lg">Request a Quote</a>
+                    <a href="#contact" class="btn btn-outline-dark btn-lg">Request a Quote</a>
                     <p class="mt-3 mb-0 text-muted">**Hardware/Software are at cost – Labor charges may apply.</p>
                 </div>
             </div>
@@ -272,7 +276,7 @@
         </div>
     </section>
 
-    <section class="py-5 bg-success text-white text-center">
+    <section class="py-5 accent-bg text-white text-center">
         <div class="container">
             <h2 class="display-5 fw-bold mb-3">Never Lose a File Again!</h2>
             <p class="lead">Get peace of mind with the world's easiest cloud backup. Back up your Mac or PC for just $9/month.</p>
@@ -291,29 +295,28 @@
                         <li><i class="bi bi-envelope-fill me-2"></i>info@resmypc.com</li>
                         <li><i class="bi bi-geo-alt-fill me-2"></i>Serving East Texas, Tyler, and Remote</li>
                     </ul>
-                    <a href="#" class="btn btn-outline-light btn-sm me-2"><i class="bi bi-twitter"></i></a>
-                    <a href="#" class="btn btn-outline-light btn-sm"><i class="bi bi-facebook"></i></a>
                 </div>
                 <div class="col-md-6">
-                    <form>
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="e3fc82c0-e00e-4d74-a3fa-c25d2f0fe766">
                         <div class="mb-3">
                             <label for="name" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="name" required>
+                            <input type="text" class="form-control" id="name" name="name" required>
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="email" required>
+                            <input type="email" class="form-control" id="email" name="email" required>
                         </div>
                         <div class="mb-3">
                             <label for="message" class="form-label">Message</label>
-                            <textarea class="form-control" id="message" rows="3" required></textarea>
+                            <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-success">Send Message</button>
+                        <button type="submit" class="btn accent-bg">Send Message</button>
                     </form>
                 </div>
             </div>
-            <div class="border-top pt-3 mt-4 text-center text-muted">
-                <p class="mb-0">&copy; 2025 Rescue My PC. All Rights Reserved. | <a href="#" class="text-muted">Back to top</a></p>
+            <div class="border-top pt-3 mt-4 text-center text-white">
+                <p class="mb-0">&copy; 2025 Rescue My PC. All Rights Reserved. | <a href="#" class="text-white">Back to top</a></p>
             </div>
         </div>
     </footer>
