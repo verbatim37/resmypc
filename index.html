@@ -1,172 +1,323 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-   <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-   <meta name="description" content="">
-   <meta name="author" content="">
-   <meta http-equiv='cache-control' content='no-cache'> 
-   <meta http-equiv='expires' content='0'> 
-   <meta http-equiv='pragma' content='no-cache'>
-   <!--<link rel="icon" href="../../../../favicon.ico">-->
-   <link rel="icon" href="https://github.com/verbatim37/resmypc/blob/main/source/favicon/android-chrome-192x192.png?raw=true">
-   <title>Rescue My PC - Computer Repair - East Texas, Tyler, Texas or remote services. </title>
-   <!-- Bootstrap core CSS -->
-   <!--<link href="../../css/editor.css" rel="stylesheet">-->
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
-   <!-- Custom styles for this template -->
-   <!--<link href="album.css" rel="stylesheet">-->
-   <!--<script src="chrome-extension://nngceckbapebfimnlniiiahkandclblb/content/fido2/page-script.js"></script></head>-->
-   <style>
-      container-max-widths: (
-      xl: 1140px,
-      );
-      .section {
-      width: 1120px;
-      };
-   </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rescue My PC - Computer Repair & IT Services | East Texas</title>
+    <meta name="description" content="Professional computer repair, managed IT, and technology services in East Texas, Tyler, and surrounding areas. We offer remote and on-site support for PCs, Macs, and networks.">
+    <link rel="icon" href="https://github.com/verbatim37/resmypc/blob/main/source/favicon/android-chrome-192x192.png?raw=true">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #6c757d;
+            --success-color: #28a745;
+            --dark-color: #343a40;
+            --light-color: #f8f9fa;
+            --accent-color: #28a745;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: var(--dark-color);
+        }
+
+        .navbar-brand img {
+            height: 50px;
+        }
+        
+        .hero-section {
+            position: relative;
+            background: url('https://images.unsplash.com/photo-1627702896500-f9b5c3286b2e?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+            color: #fff;
+            padding: 10rem 0;
+            text-align: center;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+
+        .service-card-icon {
+            font-size: 3rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .bg-gray {
+            background-color: #f1f4f8;
+        }
+
+        .testimonial-carousel .carousel-item {
+            padding: 4rem 2rem;
+            text-align: center;
+            font-style: italic;
+        }
+
+        .testimonial-carousel img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+
+        .footer-cta {
+            background-color: var(--dark-color);
+            color: #fff;
+            padding: 4rem 0;
+        }
+
+        .footer-cta .btn {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+
+        .footer-cta .btn:hover {
+            background-color: #218838;
+            border-color: #1e7e34;
+        }
+    </style>
+</head>
 <body>
-   <div class="container">
-      <header>
-         <section>
-         <div class="collapse bg-dark" id="navbarHeader">
-            <div class="container-fluid">
-               <div class="row">
-                  <div class="col-sm-8 col-md-7 py-4">
-                     <h4 class="text">Rescue My PC - Computer Repair - East Texas, Tyler, Texas or remote services. </h4>
-                     <p class="text-muted">Rescue My PC is an independently owned and operated technology services company. Let us be a part of your managed technology services.</p>
-                  </div>
-                  <div class="col-sm-4 offset-md-1 py-4">
-                     <h4 class="text-white">Contact</h4>
-                     <ul class="list-unstyled">
-                        <li><a href="#" class="text-white">Follow on Twitter</a></li>
-                        <li><a href="#" class="text-white">Like on Facebook</a></li>
-                        <li><a href="#" class="text-white">Email me</a></li>
-                     </ul>
-                  </div>
-               </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://github.com/verbatim37/resmypc/blob/main/source/RescueMyPCLogo.png?raw=true" alt="Rescue My PC Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.backblaze.com/partner/af6613" target="_blank">Cloud Backup</a>
+                    </li>
+                </ul>
             </div>
-         </div>
-         <div class="navbar navbar-dark bg-dark box-shadow">
-            <div class="container-fluid d-flex justify-content-between" style="text-align: center;"><img src="https://github.com/verbatim37/resmypc/blob/main/source/RescueMyPCLogo.png?raw=true" class="img-fluid" height="75px" width="" style="align:center" >
-               <a href="www.resmypc.com" class="navbar-brand d-flex align-items-center"></a>    
-            </div>
-         </div>
-      </header>
-      <main role="main">
-         <section class="jumbotron text-center">
-            <div class="container-lg">
-               <h1 class="jumbotron-heading">
-                  <h2 class="site-description" style="text-align: center; >PC, Mac, Network Service for East Texas</h2>
-               </h1>
-               <p class="lead text-muted">
-               <div>We are an independently owned and operated technology services company. Let us help you manage your technology chaos. Serving East Texas and the surrounding areas, as well as remote.</div>
-               <br/><a href="tel:[903-231-3493]" class="btn btn-success btn-lg active" role="button" aria-pressed="true">903-231-3493</a>  <a href="mailto:info@resmypc.com" class="btn btn-success btn-lg active" role="button" aria-pressed="true">Email Us!</a></p>
-            </div>
-         </section>
-      </main>
-         <section class="jumbotron text-center" style="background-color: rgb(150, 150, 150);">
-          <h1 class="" style="vertical-align: auto;">Services Offered</h1>
-            <div class="card" style="">
-               <div class="card-body">
-                <!--
-                  <p class="card-text" style="background-color: rgb(255, 255, 255);">
-                  <p style="color: rgb(0, 0, 0); font-size: medium; text-align: start; background-color: rgb(209, 209, 209);"><span style="text-decoration-line: underline;"><strong>Computer Repair and Maintenance:</strong></span></p>
-                  <p class="p1" style="color: rgb(0, 0, 0); font-size: medium; text-align: start; background-color: rgb(255, 255, 255);"><span class="s1">Diagnostic Services<br></span>Remote Support Services<br>RootKit, Viruses, Malware, Scareware Removal, and Prevention.<br>Boot Issues, Computer Hijacks, Browser Hijacks, Forgotten Passwords,<br>Blue Screen Errors, Lockups, Freezes,&nbsp;Spontaneous Reboots, Memory Errors, Registry Errors, Hardware Failures,&nbsp;Network Discovery Issues, Data Recovery, Security.<br>Network and Internet Installations<br>In House and In Office Calls<br>Online Backup Services<b>&nbsp;(Discounts Offered)<br></b>Home Networks / Network Optimization<br>Training Services – Office / OSX / Microsoft<br>Password Removal<br>**New PC’s and Upgrades<br>**Software Installations and Settings Transfer(s)</p>
-                  <p class="p1" style="color: rgb(0, 0, 0); font-size: medium; text-align: start; background-color: rgb(209, 209, 209);"><span style="text-decoration-line: underline;"><span class="s1"><b>Advanced Services:</b></span></span></p>
-                  <p class="p1" style="color: rgb(0, 0, 0); font-size: medium; text-align: start; background-color: rgb(255, 255, 255);"><span class="s1">Data Recovery Services / Secure Disposal<br></span>Small Business Networks and Managed IT Services<br>Online Backup Services / Cloud File Hosting<br>Website Services / Hosting and Web Development</p>
-                  <p class="p1" style="color: rgb(0, 0, 0); font-size: medium; text-align: start; background-color: rgb(255, 255, 255);">
-                  <p class="p1" style="background-color: rgb(209, 209, 209);"><span style="text-decoration-line: underline; text-align: start;"><span class="s1"><b>Rates:</b></span></span></p> 
-                  <p class="s1" style="background-color: rgb(255, 255, 255); text-align: start;" ><span class="s1" style="background-color: rgb(255, 255, 255); text-align: start;">Please send an email to&nbsp;<a href="mailto:resmypc@gmail.com" style="color: rgb(0, 162, 216);">info@resmypc.com</a>&nbsp;to receive a detailed quote for your specific issue. Thank you for your interest in the site!</span></p>
-                  <p class="s1" style="background-color: rgb(255, 255, 255); text-align: start;"><span class="s1"><b>Please contact us if you have any questions about our services or if you request a service not listed here. Thank you!</b></span></p>
-                  <p class="s1" style="background-color: rgb(255, 255, 255); text-align: start;"><span class="s1">*Prices are subject to change<br></span>**Hardware/Software are at cost – Labor charges may apply</p>
-                  </p></p>
-                  -->
-                  <ul class="list-group text-left">
-                    <li class="list-group-item active"><strong>Computer Repair and Maintenance:</strong></li> 
-                    <li class="list-group-item">Diagnostic Services</li>
-                    <li class="list-group-item">RootKit, Viruses, Malware, Scareware Removal, and Prevention.</li>
-                    <li class="list-group-item">Boot Issues, Computer Hijacks, Browser Hijacks, Forgotten Passwords</li>
-                    <li class="list-group-item">Blue Screen Errors, Lockups, Freezes, Spontaneous Reboots, Memory Errors, Registry Errors, Hardware Failures, Network Discovery Issues, Data Recovery, Security.</li>
-                    <li class="list-group-item">Network and Internet Installations</li> 
-                    <li class="list-group-item">In House and In Office Calls</li>
-                    <li class="list-group-item">Online Backup Services (Discounts Offered)</li>
-                    <li class="list-group-item">Home Networks / Network Optimization</li>
-                    <li class="list-group-item">Training Services – Office / OSX / Microsoft</li>
-                    <li class="list-group-item">Password Removal</li>
-                    <li class="list-group-item">**New PC’s and Upgrades</li>
-                    <li class="list-group-item">**Software Installations and Settings Transfer(s)</li>
-                  </ul>
-                  <br/>
-                  <ul class="list-group text-left">
-                    <li class="list-group-item active"><strong>Advanced Services:</strong></li>
-                    <li class="list-group-item">Data Recovery Services / Secure Disposal</li>
-                    <li class="list-group-item">Small Business Networks and Managed IT Services</li>
-                    <li class="list-group-item">Online Backup Services / Cloud File Hosting</li>
-                    <li class="list-group-item">Website Services / Hosting and Web Development</li> 
-                  </ul>
-                  <br/>
-                  <ul class="list-group text-left">
-                    <li class="list-group-item active"><strong>Rates:</strong></li>
-                    <li class="list-group-item">Please send an email to <a href="mailto:info@resmypc.com" style="color: rgb(0, 162, 216);">info@resmypc.com</a> to receive a detailed quote for your specific issue. Thank you for your interest in the site!<br/><br/>Please contact us if you have any questions about our services or if you request a service not listed here. Thank you!<br/><br/>*Prices are subject to change<br/>**Hardware/Software are at cost – Labor charges may apply</li>
-                  </ul>		   
-               </div>
-            </div>
-         </section>
-         </section>
-         <section class="jumbotron text-center" style="background-color: rgb(150, 150, 150);">
-            <div class="container-fluid">
-                  <div class="col">
-                     <img src="https://github.com/verbatim37/resmypc/blob/main/source/East_Texas_Managed_IT_Cloud_Online_Backup.png?raw=true" class="img-fluid" height="60px" width="400px" style="vertical-align: middle"> 
-                  </div>
-                  <br/>
-                  <div class="col">
-                     <img src="https://github.com/verbatim37/resmypc/blob/main/source/East_Texas_Managed_IT_Computer_Repairs_Repair.png?raw=true" class="img-fluid" height="60px" width="400px" style="vertical-align: middle"> 
-                  </div>
-                  <br/>
-                  <div class="col">
-                     <img src="https://github.com/verbatim37/resmypc/blob/main/source/East_Texas_Managed_IT_Virus_Removal.png?raw=true" class="img-fluid" height="60px" width="400px" style="vertical-align: middle">
-                  </div>
-               </div>
-         </section>
-      </main>
-      <section class="jumbotron text-center" style="background-color: rgb(233, 236, 239);">
-         <div class="container-fluid">
-            <h1 class="jumbotron-heading"> 
-               <h2 class="site-description" style="color: rgb(53, 53, 53); text-align: center;">Unlimited Online Backup Service</h2>
-            </h1>
-            <p class="lead text-muted">
-            <div>
-               Never Lose a File Again with the World's Easiest Cloud Backup! Get peace of mind knowing your files are backed up securely in the cloud. Back up your Mac or PC just $9/month.
-               <div><br></div>
-            </div> 
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 class="display-4 fw-bold">PC, Mac, & Network Services for East Texas</h1>
+            <p class="lead text-white-50">
+                We are an independently owned and operated technology services company. Let us help you manage your technology chaos.
+                Serving East Texas and the surrounding areas, as well as remote.
             </p>
-         </div>
-         <a href="https://www.backblaze.com/partner/af6613" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Download Free Trial</a>
-      </section>
-      <!-- Bootstrap core JavaScript
-         ================================================== -->
-      <!-- Placed at the end of the document so the pages load faster -->
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-      <script src="../../js/vendor/popper.min.js"></script>
-      <footer class="text-muted">
-         <div class="container">
-            <p class="float-right">
-               <a href="#">Back to top</a>
+            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+                <a href="tel:903-231-3493" class="btn btn-success btn-lg px-4 gap-3">Call: 903-231-3493</a>
+                <a href="mailto:info@resmypc.com" class="btn btn-outline-light btn-lg px-4">Email Us!</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="services" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">Services Offered</h2>
+                <p class="lead text-muted">We provide a wide range of professional technology services to meet your needs.</p>
+            </div>
+            
+            <div class="row g-4 mb-5">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card service-card shadow-sm border-0">
+                        <div class="card-body text-center">
+                            <i class="bi bi-tools service-card-icon"></i>
+                            <h5 class="card-title fw-bold">Computer Repair & Maintenance</h5>
+                            <ul class="list-unstyled text-start mt-3">
+                                <li><i class="bi bi-caret-right-fill text-success me-2"></i>Diagnostic Services</li>
+                                <li><i class="bi bi-caret-right-fill text-success me-2"></i>Virus, Malware, and RootKit Removal</li>
+                                <li><i class="bi bi-caret-right-fill text-success me-2"></i>Boot Issues & Blue Screen Errors</li>
+                                <li><i class="bi bi-caret-right-fill text-success me-2"></i>Hardware Failures & Upgrades</li>
+                                <li><i class="bi bi-caret-right-fill text-success me-2"></i>Forgotten Password Removal</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card service-card shadow-sm border-0">
+                        <div class="card-body text-center">
+                            <i class="bi bi-router-fill service-card-icon"></i>
+                            <h5 class="card-title fw-bold">Network & IT Services</h5>
+                            <ul class="list-unstyled text-start mt-3">
+                                <li><i class="bi bi-caret-right-fill text-success me-2"></i>Home & Business Network Setup</li>
+                                <li><i class="bi bi-caret-right-fill text-success me-2"></i>Network Optimization & Security</li>
+                                <li><i class="bi bi-caret-right-fill text-success me-2"></i>Managed IT Services for Small Businesses</li>
+                                <li><i class="bi bi-caret-right-fill text-success me-2"></i>Remote Support Services</li>
+                                <li><i class="bi bi-caret-right-fill text-success me-2"></i>In-House and In-Office Calls</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card service-card shadow-sm border-0">
+                        <div class="card-body text-center">
+                            <i class="bi bi-database-fill-check service-card-icon"></i>
+                            <h5 class="card-title fw-bold">Data & Cloud Solutions</h5>
+                            <ul class="list-unstyled text-start mt-3">
+                                <li><i class="bi bi-caret-right-fill text-success me-2"></i>Data Recovery Services</li>
+                                <li><i class="bi bi-caret-right-fill text-success me-2"></i>Secure Data Disposal</li>
+                                <li><i class="bi bi-caret-right-fill text-success me-2"></i>Online Backup Services & Cloud Hosting</li>
+                                <li><i class="bi bi-caret-right-fill text-success me-2"></i>Website Hosting and Development</li>
+                                <li><i class="bi bi-caret-right-fill text-success me-2"></i>Software Installation & Data Transfer</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card bg-gray p-4 shadow-sm border-0">
+                <div class="card-body text-center">
+                    <h4 class="fw-bold mb-3">Rates & Pricing</h4>
+                    <p class="lead">
+                        For a detailed quote tailored to your specific issue, please contact us.
+                        Prices are subject to change.
+                    </p>
+                    <a href="mailto:info@resmypc.com" class="btn btn-outline-dark btn-lg">Request a Quote</a>
+                    <p class="mt-3 mb-0 text-muted">**Hardware/Software are at cost – Labor charges may apply.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-5 bg-dark text-white">
+        <div class="container text-center">
+            <h2 class="display-5 fw-bold mb-3">About Rescue My PC</h2>
+            <p class="lead">
+                Rescue My PC is an independently owned and operated technology services company dedicated to providing
+                expert support and solutions to the East Texas community and beyond.
+                We pride ourselves on personalized service and helping our clients navigate the complexities of modern technology.
             </p>
-            <p><span style="color: rgb(0, 0, 0); font-size: medium; background-color: rgb(255, 255, 255);">Rescue My PC&nbsp;</span><span class="sep" style="color: rgb(0, 0, 0); font-size: medium; background-color: rgb(255, 255, 255);">/&nbsp;</span><span style="color: rgb(0, 0, 0); font-family: &quot;Times New Roman&quot;; font-size: medium; background-color: rgb(209, 209, 209);"></span><a href="http://www.resmypc.com/" style="font-size: medium; background-color: rgb(255, 255, 255);">Computer Repair - East Texas - Tyler and surrounding areas</a><span style="color: rgb(0, 0, 0); font-size: medium; background-color: rgb(255, 255, 255);">&nbsp;</span><span style="color: rgb(0, 0, 0); font-size: medium; background-color: rgb(255, 255, 255);"></span></p>
-         </div>
-      </footer>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-      <!--<script src="../../js/bootstrap.min.js"></script>-->
-      <script src="https://cdn.jsdelivr.net/npm/holderjs@2.9.4/holder.js"></script>
-      <svg xmlns="http://www.w3.org/2000/svg" width="348" height="225" viewBox="0 0 348 225" preserveAspectRatio="none" style="display: none; visibility: hidden; position: absolute; top: -100%; left: -100%;">
-         <defs>
-            <style type="text/css"></style>
-         </defs>
-         <text x="0" y="17" style="font-weight:bold;font-size:17pt;font-family:Arial, Helvetica, Open Sans, sans-serif">Thumbnail</text>
-      </svg>
-   </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-5 bg-gray">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">What Our Clients Say</h2>
+            </div>
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://i.pravatar.cc/80?u=a" class="d-block mx-auto" alt="Client 1">
+                        <p class="lead">"Rescue My PC saved my business! Their managed IT services are a game-changer. Professional, fast, and reliable."</p>
+                        <p class="fw-bold">- Jane Doe, Small Business Owner</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.pravatar.cc/80?u=b" class="d-block mx-auto" alt="Client 2">
+                        <p class="lead">"I had a terrible virus on my computer, and they removed it completely without losing any of my files. Highly recommend!"</p>
+                        <p class="fw-bold">- John Smith, Home User</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.pravatar.cc/80?u=c" class="d-block mx-auto" alt="Client 3">
+                        <p class="lead">"The remote support was fantastic. They fixed my network issue quickly and explained everything clearly. Great service!"</p>
+                        <p class="fw-bold">- Emily White, East Texas Resident</p>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-success text-white text-center">
+        <div class="container">
+            <h2 class="display-5 fw-bold mb-3">Never Lose a File Again!</h2>
+            <p class="lead">Get peace of mind with the world's easiest cloud backup. Back up your Mac or PC for just $9/month.</p>
+            <a href="https://www.backblaze.com/partner/af6613" target="_blank" class="btn btn-outline-light btn-lg mt-3">Download Free Trial</a>
+        </div>
+    </section>
+
+    <footer id="contact" class="footer-cta text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <h4 class="fw-bold mb-3">Get In Touch</h4>
+                    <p>Have questions or need a service? Fill out the form below and we'll get back to you shortly.</p>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-telephone-fill me-2"></i>(903) 231-3493</li>
+                        <li><i class="bi bi-envelope-fill me-2"></i>info@resmypc.com</li>
+                        <li><i class="bi bi-geo-alt-fill me-2"></i>Serving East Texas, Tyler, and Remote</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline-light btn-sm me-2"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="btn btn-outline-light btn-sm"><i class="bi bi-facebook"></i></a>
+                </div>
+                <div class="col-md-6">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success">Send Message</button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-top pt-3 mt-4 text-center text-muted">
+                <p class="mb-0">&copy; 2025 Rescue My PC. All Rights Reserved. | <a href="#" class="text-muted">Back to top</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
