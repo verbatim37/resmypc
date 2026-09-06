@@ -1,3 +1,13 @@
+Here is the complete `index.html` with your new trade-in/device valuation feature integrated.
+
+### Implementation Details:
+
+* **Navigation Item:** Added a prominent **"Sell Your Tech"** link to the top menu that smoothly scrolls down to `#sell-tech`.
+* **Expandable Section:** Built as a dedicated, compact accordion/collapse card. It takes up minimal screen space by default, but clicks open into a straightforward trade-in form that anyone can fill out in under a minute.
+* **Basic Device Fields:** Form covers device category (iPhone/iPad/Android, Laptop, Desktop/All-in-One, Server/Networking, or Other), brand/model, cosmetic/functional condition, power/accessories, and contact information.
+* **Direct Form Submission:** Routes through your existing Web3Forms endpoint with a custom hidden subject tag (`"New Tech for Cash Valuation Request"`) so trade-ins are immediately flagged in your inbox.
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -119,6 +129,9 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sell-tech"><i class="bi bi-cash-coin me-1"></i>Sell Your Tech</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#hardware-store">Inventory</a>
@@ -255,6 +268,88 @@
         </div>
     </section>
 
+    <!-- EXPANDABLE "SELL YOUR TECH FOR CASH" SECTION -->
+    <section id="sell-tech" class="py-5 bg-white border-top">
+        <div class="container">
+            <div class="card shadow-sm border-0 mx-auto" style="max-width: 900px;">
+                <div class="card-body p-4 p-md-5">
+                    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 mb-3">
+                        <div>
+                            <span class="badge accent-bg text-white px-3 py-2 text-uppercase mb-2">Trade-In & Buyback</span>
+                            <h2 class="h3 fw-bold mb-1"><i class="bi bi-cash-stack text-success me-2"></i>Get Cash for Your Used Tech</h2>
+                            <p class="text-muted mb-0">Selling a laptop, desktop, iPhone, iPad, or excess gear? Fill out the quick appraisal form below for a fair quote.</p>
+                        </div>
+                        <button class="btn btn-dark fw-bold px-4 py-2 text-nowrap" type="button" data-bs-toggle="collapse" data-bs-target="#sellTechCollapse" aria-expanded="false" aria-controls="sellTechCollapse">
+                            <i class="bi bi-pencil-square me-2"></i>Open Appraisal Form
+                        </button>
+                    </div>
+
+                    <!-- COLLAPSIBLE FORM CONTAINER -->
+                    <div class="collapse mt-4" id="sellTechCollapse">
+                        <div class="p-3 p-md-4 rounded bg-light border">
+                            <form action="https://api.web3forms.com/submit" method="POST">
+                                <input type="hidden" name="access_key" value="e3fc82c0-e00e-4d74-a3fa-c25d2f0fe766">
+                                <input type="hidden" name="subject" value="New Tech for Cash Valuation Request">
+
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="deviceCategory" class="form-label fw-semibold">Device Type</label>
+                                        <select class="form-select" id="deviceCategory" name="device_type" required>
+                                            <option value="" selected disabled>Select your device type...</option>
+                                            <option value="Laptop">Laptop / MacBook</option>
+                                            <option value="Desktop">Desktop PC / Mac / All-in-One</option>
+                                            <option value="Phone/Tablet">iPhone / iPad / Tablet / Phone</option>
+                                            <option value="Server/Network">Server / Network Equipment</option>
+                                            <option value="Other">Other Electronics / Components</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="deviceModel" class="form-label fw-semibold">Brand & Model</label>
+                                        <input type="text" class="form-control" id="deviceModel" name="brand_model" placeholder="e.g. Dell Latitude 5420, iPhone 13, custom PC" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="deviceCondition" class="form-label fw-semibold">Condition</label>
+                                        <select class="form-select" id="deviceCondition" name="condition" required>
+                                            <option value="Like New / Excellent">Like New / Excellent (Mint)</option>
+                                            <option value="Good / Normal Wear">Good (Minor scuffs, fully working)</option>
+                                            <option value="Fair / Cracked / Dented">Fair (Heavier wear / minor issues)</option>
+                                            <option value="Not Working / For Parts">Needs Repair / Not Booting / For Parts</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="accessories" class="form-label fw-semibold">Charger / Power Cord Included?</label>
+                                        <select class="form-select" id="accessories" name="has_charger" required>
+                                            <option value="Yes, includes original charger">Yes, includes working charger</option>
+                                            <option value="No charger available">No charger available</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="deviceSpecs" class="form-label fw-semibold">Specs or Details (Optional)</label>
+                                        <textarea class="form-control" id="deviceSpecs" name="details" rows="2" placeholder="Processor, storage size, RAM, battery condition, or any faults (cracked screen, bad key, etc.)"></textarea>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label for="sellerName" class="form-label fw-semibold">Your Name</label>
+                                        <input type="text" class="form-control" id="sellerName" name="seller_name" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="sellerContact" class="form-label fw-semibold">Phone or Email for Quote</label>
+                                        <input type="text" class="form-control" id="sellerContact" name="seller_contact" placeholder="Phone or email" required>
+                                    </div>
+                                    <div class="col-12 text-end mt-3">
+                                        <button type="submit" class="btn accent-bg text-white fw-bold px-4 py-2">
+                                            <i class="bi bi-send-check-fill me-1"></i>Submit for Evaluation
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- DEDICATED HARDWARE & EBAY INVENTORY SECTION -->
     <section id="hardware-store" class="py-5 bg-gray border-top border-bottom">
         <div class="container">
@@ -361,3 +456,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+```
