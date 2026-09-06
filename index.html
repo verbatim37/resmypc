@@ -15,8 +15,10 @@
             --primary-color: #007bff;
             --secondary-color: #6c757d;
             --success-color: #28a745;
-            --dark-color: #343a40;
-            --light-color: #f8f9fa;
+            --dark-color: #1f2429;
+            --light-color: #ffffff;
+            --bg-muted: #f4f6f9;
+            --bg-subtle: #e9ecef;
             --accent-color: #3892C7;
         }
 
@@ -26,14 +28,36 @@
         }
 
         .navbar-brand img {
-            height: 50px;
+            height: 48px;
+        }
+
+        /* Fixed Mobile Dropdown Offsets */
+        @media (max-width: 991.98px) {
+            .navbar-collapse {
+                background-color: #212529;
+                padding: 1rem 1.25rem;
+                margin-top: 0.75rem;
+                border-radius: 0.5rem;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            .navbar-nav .nav-item {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            }
+            .navbar-nav .nav-item:last-child {
+                border-bottom: none;
+            }
+            .navbar-nav .nav-link {
+                padding: 0.65rem 0.5rem !important;
+                display: flex;
+                align-items: center;
+            }
         }
         
         .hero-section {
             position: relative;
             background: url('https://github.com/verbatim37/resmypc/blob/main/source/networkimage.jpg?raw=true') no-repeat center center/cover;
             color: #fff;
-            padding: 10rem 0;
+            padding: 9rem 0;
             text-align: center;
         }
 
@@ -43,7 +67,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.6);
+            background-color: rgba(0, 0, 0, 0.65);
             z-index: 1;
         }
 
@@ -53,70 +77,74 @@
         }
         
         .hero-content h1 {
-            font-size: 3.5rem;
+            font-size: 3.25rem;
             font-weight: 700;
         }
 
         .hero-content p {
             font-size: 1.25rem;
-            max-width: 700px;
+            max-width: 720px;
             margin: 0 auto 2rem;
         }
 
         .service-card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             height: 100%;
+            background-color: #ffffff;
+            border-radius: 0.75rem;
         }
 
         .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.12);
         }
 
         .service-card-icon {
-            font-size: 3rem;
+            font-size: 2.75rem;
             color: var(--accent-color);
             margin-bottom: 1rem;
         }
 
-        .bg-gray {
-            background-color: #f1f4f8;
+        .bg-section-light {
+            background-color: #ffffff;
+        }
+
+        .bg-section-tinted {
+            background-color: #f4f6f9;
+        }
+
+        .bg-section-contrast {
+            background-color: #edf2f7;
         }
 
         .footer-cta {
             background-color: var(--dark-color);
             color: #fff;
-            padding: 4rem 0;
-        }
-
-        .footer-cta .btn {
-            background-color: var(--accent-color);
-            border-color: var(--accent-color);
-        }
-
-        .footer-cta .btn:hover {
-            background-color: #218838;
-            border-color: #1e7e34;
+            padding: 4.5rem 0 2rem;
         }
 
         .accent-bg {
             background-color: var(--accent-color) !important;
+        }
+
+        .accent-text {
+            color: var(--accent-color) !important;
         }
     </style>
 </head>
 <body>
 
     <!-- NAV BAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand d-flex align-items-center" href="#">
                 <img src="https://github.com/verbatim37/resmypc/blob/main/source/RescueMyPCLogo.png?raw=true" alt="Rescue My PC Logo">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto text-start">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#services">Services</a>
                     </li>
@@ -136,7 +164,7 @@
                         <a class="nav-link" href="https://www.ebay.com/str/rescuemypc" target="_blank"><i class="bi bi-shop me-1"></i>Our eBay Store</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://www.idrive.com/p=rescuemypc" target="_blank">Cloud Backup</a>
+                        <a class="nav-link" href="https://www.idrive.com/p=rescuemypc" target="_blank"><i class="bi bi-cloud-arrow-up me-1"></i>Cloud Backup</a>
                     </li>
                 </ul>
             </div>
@@ -147,22 +175,23 @@
     <header class="hero-section">
         <div class="hero-overlay"></div>
         <div class="container hero-content">
-            <h1 class="display-4 fw-bold">Computer Repair & Tech Support in East Texas</h1>
+            <h1 class="display-4 fw-bold mb-3">Computer Repair & Tech Support in East Texas</h1>
             <p class="lead text-white">
                 Rescue My PC is a locally owned computer service and support company based in Tyler, Texas. Let us solve your technology chaos with quick turnaround times and professional service.
             </p>
             <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
-                <a href="tel:903-231-3493" class="btn accent-bg btn-lg px-4 gap-3 text-white">Call: 903-231-3493</a>
-                <a href="#contact" class="btn btn-outline-light btn-lg px-4">Email Our Technicians</a>
+                <a href="tel:903-231-3493" class="btn accent-bg btn-lg px-4 gap-3 text-white fw-bold shadow-sm">Call: 903-231-3493</a>
+                <a href="#contact" class="btn btn-outline-light btn-lg px-4 fw-bold">Email Our Technicians</a>
             </div>
         </div>
     </header>
 
-    <!-- SERVICES OFFERED SECTION (BALANCED 4-COLUMN GRID) -->
-    <section id="services" class="py-5">
+    <!-- SECTION 1: SERVICES (TINTED BACKGROUND) -->
+    <section id="services" class="py-5 bg-section-tinted border-bottom">
         <div class="container-fluid px-md-5">
             <div class="text-center mb-5">
-                <h2 class="display-5 fw-bold">Professional Computer Services in Tyler, TX</h2>
+                <span class="badge accent-bg text-white px-3 py-2 text-uppercase mb-2">Our Expertise</span>
+                <h2 class="display-6 fw-bold">Professional Computer Services in Tyler, TX</h2>
                 <p class="lead text-muted">From troubleshooting home software issues to configuring secure business networks, our expert technicians can help you with any tech-related problem.</p>
             </div>
             
@@ -170,15 +199,15 @@
                 <!-- COL 1: REPAIR & SCREEN -->
                 <div class="col-md-6 col-xl-3">
                     <div class="card service-card shadow-sm border-0">
-                        <div class="card-body text-center">
+                        <div class="card-body text-center p-4">
                             <i class="bi bi-tools service-card-icon"></i>
-                            <h3 class="h5 card-title fw-bold">Computer Repair & Screen Replacement</h3>
-                            <ul class="list-unstyled text-start mt-3">
-                                <li><i class="bi bi-caret-right-fill text-muted me-2"></i>Complete Hardware Diagnostics</li>
-                                <li><i class="bi bi-caret-right-fill text-muted me-2"></i>Laptop LCD Screen Repair</li>
-                                <li><i class="bi bi-caret-right-fill text-muted me-2"></i>Virus, Malware & Ransomware Removal</li>
-                                <li><i class="bi bi-caret-right-fill text-muted me-2"></i>Boot Failures & Blue Screen (BSOD) Fixes</li>
-                                <li><i class="bi bi-caret-right-fill text-muted me-2"></i>Keyboard & Stuck Key Repair</li>
+                            <h3 class="h5 card-title fw-bold mb-3">Computer Repair & Screen Replacement</h3>
+                            <ul class="list-unstyled text-start small mb-0">
+                                <li class="py-1"><i class="bi bi-check-circle-fill text-primary me-2"></i>Complete Hardware Diagnostics</li>
+                                <li class="py-1"><i class="bi bi-check-circle-fill text-primary me-2"></i>Laptop LCD Screen Repair</li>
+                                <li class="py-1"><i class="bi bi-check-circle-fill text-primary me-2"></i>Virus, Malware & Ransomware Removal</li>
+                                <li class="py-1"><i class="bi bi-check-circle-fill text-primary me-2"></i>Boot Failures & Blue Screen (BSOD) Fixes</li>
+                                <li class="py-1"><i class="bi bi-check-circle-fill text-primary me-2"></i>Keyboard & Stuck Key Repair</li>
                             </ul>
                         </div>
                     </div>
@@ -186,15 +215,15 @@
                 <!-- COL 2: HARDWARE UPGRADES -->
                 <div class="col-md-6 col-xl-3">
                     <div class="card service-card shadow-sm border-0">
-                        <div class="card-body text-center">
+                        <div class="card-body text-center p-4">
                             <i class="bi bi-speedometer service-card-icon"></i>
-                            <h3 class="h5 card-title fw-bold">Hardware Upgrades & Custom Builds</h3>
-                            <ul class="list-unstyled text-start mt-3">
-                                <li><i class="bi bi-caret-right-fill text-muted me-2"></i>High-Speed SSD Hard Drive Upgrades</li>
-                                <li><i class="bi bi-caret-right-fill text-muted me-2"></i>RAM Memory Expansion</li>
-                                <li><i class="bi bi-caret-right-fill text-muted me-2"></i>Top-Tier Custom Built Gaming PCs</li>
-                                <li><i class="bi bi-caret-right-fill text-muted me-2"></i>Home Streaming Media Centers</li>
-                                <li><i class="bi bi-caret-right-fill text-muted me-2"></i>Optimized Business Workstations</li>
+                            <h3 class="h5 card-title fw-bold mb-3">Hardware Upgrades & Custom Builds</h3>
+                            <ul class="list-unstyled text-start small mb-0">
+                                <li class="py-1"><i class="bi bi-check-circle-fill text-primary me-2"></i>High-Speed SSD Hard Drive Upgrades</li>
+                                <li class="py-1"><i class="bi bi-check-circle-fill text-primary me-2"></i>RAM Memory Expansion</li>
+                                <li class="py-1"><i class="bi bi-check-circle-fill text-primary me-2"></i>Top-Tier Custom Built Gaming PCs</li>
+                                <li class="py-1"><i class="bi bi-check-circle-fill text-primary me-2"></i>Home Streaming Media Centers</li>
+                                <li class="py-1"><i class="bi bi-check-circle-fill text-primary me-2"></i>Optimized Business Workstations</li>
                             </ul>
                         </div>
                     </div>
@@ -202,15 +231,15 @@
                 <!-- COL 3: NETWORK & IT -->
                 <div class="col-md-6 col-xl-3">
                     <div class="card service-card shadow-sm border-0">
-                        <div class="card-body text-center">
+                        <div class="card-body text-center p-4">
                             <i class="bi bi-router-fill service-card-icon"></i>
-                            <h3 class="h5 card-title fw-bold">Network & IT Managed Services</h3>
-                            <ul class="list-unstyled text-start mt-3">
-                                <li><i class="bi bi-caret-right-fill text-muted me-2"></i>Home & Office Network Setup</li>
-                                <li><i class="bi bi-caret-right-fill text-muted me-2"></i>Free Network Performance Evaluation</li>
-                                <li><i class="bi bi-caret-right-fill text-muted me-2"></i>Secure WiFi & Network Optimization</li>
-                                <li><i class="bi bi-caret-right-fill text-muted me-2"></i>Remote Support Services</li>
-                                <li><i class="bi bi-caret-right-fill text-muted me-2"></i>On-Site Business Support Calls</li>
+                            <h3 class="h5 card-title fw-bold mb-3">Network & IT Managed Services</h3>
+                            <ul class="list-unstyled text-start small mb-0">
+                                <li class="py-1"><i class="bi bi-check-circle-fill text-primary me-2"></i>Home & Office Network Setup</li>
+                                <li class="py-1"><i class="bi bi-check-circle-fill text-primary me-2"></i>Free Network Performance Evaluation</li>
+                                <li class="py-1"><i class="bi bi-check-circle-fill text-primary me-2"></i>Secure WiFi & Network Optimization</li>
+                                <li class="py-1"><i class="bi bi-check-circle-fill text-primary me-2"></i>Remote Support Services</li>
+                                <li class="py-1"><i class="bi bi-check-circle-fill text-primary me-2"></i>On-Site Business Support Calls</li>
                             </ul>
                         </div>
                     </div>
@@ -218,15 +247,15 @@
                 <!-- COL 4: DATA RECOVERY -->
                 <div class="col-md-6 col-xl-3">
                     <div class="card service-card shadow-sm border-0">
-                        <div class="card-body text-center">
+                        <div class="card-body text-center p-4">
                             <i class="bi bi-database-fill-check service-card-icon"></i>
-                            <h3 class="h5 card-title fw-bold">Data Recovery & OS Upgrades</h3>
-                            <ul class="list-unstyled text-start mt-3">
-                                <li><i class="bi bi-caret-right-fill text-muted me-2"></i>Advanced Hard Drive Data Recovery</li>
-                                <li><i class="bi bi-caret-right-fill text-muted me-2"></i>Windows 10, Windows 11 & macOS Upgrades</li>
-                                <li><i class="bi bi-caret-right-fill text-muted me-2"></i>Secure Data Transfer & Migration</li>
-                                <li><i class="bi bi-caret-right-fill text-muted me-2"></i>Software Installation & Configuration</li>
-                                <li><i class="bi bi-caret-right-fill text-muted me-2"></i>Secure Data Disposal & Wiping</li>
+                            <h3 class="h5 card-title fw-bold mb-3">Data Recovery & OS Upgrades</h3>
+                            <ul class="list-unstyled text-start small mb-0">
+                                <li class="py-1"><i class="bi bi-check-circle-fill text-primary me-2"></i>Advanced Hard Drive Data Recovery</li>
+                                <li class="py-1"><i class="bi bi-check-circle-fill text-primary me-2"></i>Windows 10, Windows 11 & macOS Upgrades</li>
+                                <li class="py-1"><i class="bi bi-check-circle-fill text-primary me-2"></i>Secure Data Transfer & Migration</li>
+                                <li class="py-1"><i class="bi bi-check-circle-fill text-primary me-2"></i>Software Installation & Configuration</li>
+                                <li class="py-1"><i class="bi bi-check-circle-fill text-primary me-2"></i>Secure Data Disposal & Wiping</li>
                             </ul>
                         </div>
                     </div>
@@ -236,7 +265,7 @@
             <!-- RATES & BRANDS SUBSECTION -->
             <div class="row g-4 align-items-stretch container mx-auto p-0">
                 <div class="col-md-6">
-                    <div class="card bg-gray p-4 shadow-sm border-0 h-100 justify-content-center">
+                    <div class="card bg-white p-4 shadow-sm border-0 h-100 justify-content-center">
                         <div class="card-body text-center">
                             <h4 class="fw-bold mb-3">Rates & Pricing</h4>
                             <p class="lead">For a detailed quote tailored to your specific system issue, please contact us. We offer quick, reliable turnaround times.</p>
@@ -246,11 +275,11 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="card bg-light p-4 shadow-sm border-0 h-100 justify-content-center">
+                    <div class="card bg-white p-4 shadow-sm border-0 h-100 justify-content-center">
                         <div class="card-body text-center">
                             <h4 class="fw-bold mb-3">Supported Brands & Operating Systems</h4>
                             <p class="text-muted">Our certified technicians maintain comprehensive experience repairing all major technology eco-systems, hardware lines, and software suites:</p>
-                            <p class="fw-semibold text-secondary">Apple Mac, Dell, HP, Lenovo, ASUS, Acer, Toshiba, Samsung, Microsoft Windows 11/10, macOS, and Linux servers.</p>
+                            <p class="fw-semibold text-secondary mb-0">Apple Mac, Dell, HP, Lenovo, ASUS, Acer, Toshiba, Samsung, Microsoft Windows 11/10, macOS, and Linux servers.</p>
                         </div>
                     </div>
                 </div>
@@ -258,25 +287,25 @@
         </div>
     </section>
 
-    <!-- EXPANDABLE "SELL YOUR TECH FOR CASH" SECTION -->
-    <section id="sell-tech" class="py-5 bg-white border-top">
+    <!-- SECTION 2: SELL YOUR TECH (CLEAN WHITE BACKGROUND) -->
+    <section id="sell-tech" class="py-5 bg-section-light border-bottom">
         <div class="container">
-            <div class="card shadow-sm border-0 mx-auto" style="max-width: 900px;">
+            <div class="card shadow-sm border mx-auto" style="max-width: 920px;">
                 <div class="card-body p-4 p-md-5">
-                    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 mb-3">
+                    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 mb-2">
                         <div>
                             <span class="badge accent-bg text-white px-3 py-2 text-uppercase mb-2">Trade-In & Buyback</span>
                             <h2 class="h3 fw-bold mb-1"><i class="bi bi-cash-stack text-success me-2"></i>Get Cash for Your Used Tech</h2>
-                            <p class="text-muted mb-0">Selling a laptop, desktop, iPhone, iPad, or excess gear? Fill out the quick appraisal form below for a fair quote.</p>
+                            <p class="text-muted mb-0">Selling a laptop, desktop, iPhone, iPad, or excess gear? Open the quick appraisal form below for a fair quote.</p>
                         </div>
                         <button class="btn btn-dark fw-bold px-4 py-2 text-nowrap" type="button" data-bs-toggle="collapse" data-bs-target="#sellTechCollapse" aria-expanded="false" aria-controls="sellTechCollapse">
                             <i class="bi bi-pencil-square me-2"></i>Open Appraisal Form
                         </button>
                     </div>
 
-                    <!-- COLLAPSIBLE FORM CONTAINER -->
+                    <!-- COLLAPSIBLE FORM -->
                     <div class="collapse mt-4" id="sellTechCollapse">
-                        <div class="p-3 p-md-4 rounded bg-light border">
+                        <div class="p-3 p-md-4 rounded bg-section-tinted border">
                             <form action="https://api.web3forms.com/submit" method="POST">
                                 <input type="hidden" name="access_key" value="e3fc82c0-e00e-4d74-a3fa-c25d2f0fe766">
                                 <input type="hidden" name="subject" value="New Tech for Cash Valuation Request">
@@ -327,7 +356,7 @@
                                         <input type="text" class="form-control" id="sellerContact" name="seller_contact" placeholder="Phone or email" required>
                                     </div>
                                     <div class="col-12 text-end mt-3">
-                                        <button type="submit" class="btn accent-bg text-white fw-bold px-4 py-2">
+                                        <button type="submit" class="btn accent-bg text-white fw-bold px-4 py-2 shadow-sm">
                                             <i class="bi bi-send-check-fill me-1"></i>Submit for Evaluation
                                         </button>
                                     </div>
@@ -340,38 +369,39 @@
         </div>
     </section>
 
-    <!-- DEDICATED HARDWARE & EBAY INVENTORY SECTION -->
-    <section id="hardware-store" class="py-5 bg-gray border-top border-bottom">
+    <!-- SECTION 3: INVENTORY STORE (CONTRAST SLATE BACKGROUND) -->
+    <section id="hardware-store" class="py-5 bg-section-contrast border-bottom">
         <div class="container">
             <div class="row align-items-center g-5">
                 <div class="col-lg-7">
-                    <h2 class="display-6 fw-bold mb-3"><i class="bi bi-shop text-primary me-2"></i>Shop Certified Refurbished Hardware & Equipment</h2>
+                    <span class="badge bg-secondary text-white px-3 py-2 text-uppercase mb-2">Refurbished Gear</span>
+                    <h2 class="display-6 fw-bold mb-3"><i class="bi bi-shop accent-text me-2"></i>Shop Certified Hardware & Equipment</h2>
                     <p class="lead">Looking for reliable high-quality computing assets without buying retail brand-new? We regularly audit, recondition, and liquidate elite hardware inventory directly online.</p>
                     <div class="row g-3 mt-2">
                         <div class="col-sm-6">
-                            <div class="d-flex align-items-center"><i class="bi bi-laptop fs-3 text-secondary me-3"></i> <strong>Laptops & Notebooks</strong></div>
+                            <div class="d-flex align-items-center bg-white p-3 rounded shadow-sm"><i class="bi bi-laptop fs-3 accent-text me-3"></i> <strong>Laptops & Notebooks</strong></div>
                         </div>
                         <div class="col-sm-6">
-                            <div class="d-flex align-items-center"><i class="bi bi-hdd-rack fs-3 text-secondary me-3"></i> <strong>Enterprise Servers</strong></div>
+                            <div class="d-flex align-items-center bg-white p-3 rounded shadow-sm"><i class="bi bi-hdd-rack fs-3 accent-text me-3"></i> <strong>Enterprise Servers</strong></div>
                         </div>
                         <div class="col-sm-6">
-                            <div class="d-flex align-items-center"><i class="bi bi-pc-display fs-3 text-secondary me-3"></i> <strong>Business & Home Desktops</strong></div>
+                            <div class="d-flex align-items-center bg-white p-3 rounded shadow-sm"><i class="bi bi-pc-display fs-3 accent-text me-3"></i> <strong>Business Desktops</strong></div>
                         </div>
                         <div class="col-sm-6">
-                            <div class="d-flex align-items-center"><i class="bi bi-cpu fs-3 text-secondary me-3"></i> <strong>Components & Used Equipment</strong></div>
+                            <div class="d-flex align-items-center bg-white p-3 rounded shadow-sm"><i class="bi bi-cpu fs-3 accent-text me-3"></i> <strong>Components & Parts</strong></div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-5 text-center">
-                    <div class="card shadow p-4 border-0 bg-white">
-                        <h4 class="fw-bold mb-3">Browse Our Live Inventory</h4>
-                        <p class="text-muted small">Check out our current certified listings on our official storefront for fast shipping and tested reliability.</p>
-                        <a href="https://www.ebay.com/str/rescuemypc" target="_blank" class="btn accent-bg text-white btn-lg w-100 fw-bold mb-3">
+                    <div class="card shadow border-0 bg-white p-4 p-md-5">
+                        <h4 class="fw-bold mb-2">Browse Live Inventory</h4>
+                        <p class="text-muted small mb-4">Check our certified listings on our official storefront for fast shipping and tested reliability.</p>
+                        <a href="https://www.ebay.com/str/rescuemypc" target="_blank" class="btn accent-bg text-white btn-lg w-100 fw-bold mb-3 shadow-sm">
                             <i class="bi bi-bag-check-fill me-2"></i>Visit Our eBay Store
                         </a>
                         <div class="border-top pt-3">
                             <p class="mb-1 text-muted small">Need specific server configurations or enterprise bulk lots?</p>
-                            <a href="#contact" class="fw-bold text-decoration-none text-primary">Inquire About Custom Equipment &rarr;</a>
+                            <a href="#contact" class="fw-bold text-decoration-none accent-text">Inquire About Custom Equipment &rarr;</a>
                         </div>
                     </div>
                 </div>
@@ -379,25 +409,26 @@
         </div>
     </section>
 
-    <!-- ABOUT SECTION -->
+    <!-- SECTION 4: ABOUT RESCUE MY PC (DARK BACKGROUND) -->
     <section id="about" class="py-5 bg-dark text-white">
-        <div class="container text-center">
+        <div class="container text-center py-4">
+            <span class="badge accent-bg text-white px-3 py-2 text-uppercase mb-3">Our Mission</span>
             <h2 class="display-5 fw-bold mb-3">About Rescue My PC in Tyler, Texas</h2>
-            <p class="lead max-width-700 mx-auto">
+            <p class="lead max-width-700 mx-auto" style="max-width: 800px;">
                 Rescue My PC is an independently owned and operated technology services company dedicated to providing expert local tech support and custom structural solutions to home and business users throughout the East Texas community. We keep a close eye on industry trends to bring you optimal, frustration-free experiences for computing infrastructure, server deployments, and desktop management.
             </p>
         </div>
     </section>
 
-    <!-- IDRIVE REMOTE BACKUP CTA -->
+    <!-- SECTION 5: CLOUD BACKUP CTA (ACCENT BACKGROUND) -->
     <section class="py-5 accent-bg text-white text-center">
-        <div class="container">
+        <div class="container py-2">
             <h2 class="display-5 fw-bold mb-4">Secure Cloud & Remote Backup Solutions</h2>
             <div class="d-flex flex-column flex-sm-row justify-content-center align-items-center gap-4">
-                <a href="https://www.idrive.com/p=rescuemypc">
-                    <img src="https://www.idrive.com/include/images/authorized_reseller.png" width="120" height="120" style="border:0;" title="Authorized Reseller" alt="Authorized Reseller"/>
+                <a href="https://www.idrive.com/p=rescuemypc" class="shadow-sm rounded bg-white p-2 d-inline-block">
+                    <img src="https://www.idrive.com/include/images/authorized_reseller.png" width="120" height="120" style="border:0;" title="Authorized Reseller" alt="Authorized Reseller">
                 </a>
-                <a target="_blank" href="https://www.idrive.com/p=rescuemypc">
+                <a target="_blank" href="https://www.idrive.com/p=rescuemypc" class="shadow-sm rounded bg-white p-2 d-inline-block">
                     <img src="https://www.idrive.com/include/images/idrive-23460_25.png" width="234" height="60" style="border:0;" title="IDrive Remote Backup" alt="IDrive Remote Backup">
                 </a>
             </div>
@@ -407,13 +438,13 @@
     <!-- FOOTER & CONTACT -->
     <footer id="contact" class="footer-cta text-light">
         <div class="container">
-            <div class="row">
+            <div class="row g-4">
                 <div class="col-md-6 mb-4">
                     <h4 class="fw-bold mb-3">Contact East Texas Tech Support</h4>
-                    <p>Have questions, or need immediate computer diagnostic services? Complete our form and an expert technician will respond quickly.</p>
-                    <ul class="list-unstyled">
-                        <li><i class="bi bi-telephone-fill me-2"></i><a href="tel:903-231-3493" class="text-white text-decoration-none">(903) 231-3493</a></li>
-                        <li><i class="bi bi-geo-alt-fill me-2"></i>Serving Tyler, Longview, and surrounding East Texas Areas (On-Site & Remote)</li>
+                    <p class="text-light">Have questions, or need immediate computer diagnostic services? Complete our form and an expert technician will respond quickly.</p>
+                    <ul class="list-unstyled mt-3">
+                        <li class="py-1"><i class="bi bi-telephone-fill me-2 accent-text"></i><a href="tel:903-231-3493" class="text-white text-decoration-none fw-semibold">(903) 231-3493</a></li>
+                        <li class="py-1"><i class="bi bi-geo-alt-fill me-2 accent-text"></i>Serving Tyler, Longview, and surrounding East Texas Areas (On-Site & Remote)</li>
                     </ul>
                 </div>
                 <div class="col-md-6">
@@ -432,13 +463,13 @@
                             <textarea class="form-control" id="message" name="message" rows="3" required placeholder="Tell us about your computer or network issue..."></textarea>
                         </div>
                         <div class="text-start">
-                            <button type="submit" class="btn accent-bg text-white fw-bold">Send Message</button>
+                            <button type="submit" class="btn accent-bg text-white fw-bold px-4 py-2">Send Message</button>
                         </div>
                     </form>
                 </div>
             </div>
-            <div class="border-top pt-3 mt-4 text-center text-white">
-                <p class="mb-0">&copy; 2026 Rescue My PC. All Rights Reserved. | <a href="#" class="text-white">Back to top</a></p>
+            <div class="border-top border-secondary pt-3 mt-4 text-center text-white-50">
+                <p class="mb-0 small">&copy; 2026 Rescue My PC. All Rights Reserved. | <a href="#" class="text-white text-decoration-none">Back to top</a></p>
             </div>
         </div>
     </footer>
